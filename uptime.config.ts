@@ -21,7 +21,7 @@ const workerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'dendrite',
       // `name` is used at status page and callback message
-      name: 'My dendrite server',
+      name: 'Dendrite server',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
@@ -49,7 +49,7 @@ const workerConfig = {
     },
     {
       id: 'forgejo',
-      name: 'My forgejo instance',
+      name: 'Forgejo instance',
       method: 'GET',
       target: 'https://git.saneke.eu/api/healthz',
       tooltip: 'Uptime of git.saneke.eu',
