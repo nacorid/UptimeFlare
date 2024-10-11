@@ -56,6 +56,10 @@ const workerConfig = {
       statusPageLink: 'https://git.saneke.eu',
       expectedCodes: [200],
       timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      checkLocationWorkerRoute: 'https://de.naco.li',
     },
     // Example TCP Monitor
     //{
