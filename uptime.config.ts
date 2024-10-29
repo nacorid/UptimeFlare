@@ -33,7 +33,7 @@ const workerConfig = {
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 30000,
+      timeout: 60000,
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
@@ -55,7 +55,7 @@ const workerConfig = {
       tooltip: 'Uptime of git.saneke.eu',
       statusPageLink: 'https://git.saneke.eu',
       expectedCodes: [200],
-      timeout: 30000,
+      timeout: 60000,
       headers: {
         'User-Agent': 'Uptimeflare',
       },
@@ -63,7 +63,7 @@ const workerConfig = {
     },
     {
       id: 'vengeful-forge',
-      name: 'Vengeful forge',
+      name: 'Vengeful Forge',
       method: 'GET',
       target: 'https://git.vengeful.eu/api/healthz',
       tooltip: 'Uptime of git.vengeful.eu',
@@ -77,7 +77,7 @@ const workerConfig = {
     },
     {
       id: 'synapse-main',
-      name: 'Vengeful Synapse',
+      name: 'Synapse server',
       method: 'GET',
       target: 'https://matrix.vengeful.eu/health',
       tooltip: 'Uptime of matrix.vengeful.eu',
