@@ -1,6 +1,6 @@
 const pageConfig = {
   // Title for your status page
-  title: "Saneke Status Page",
+  title: "Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
     { link: 'https://git.saneke.eu', label: 'Forgejo' },
@@ -61,6 +61,34 @@ const workerConfig = {
       },
       checkLocationWorkerRoute: 'https://de.naco.li',
     },
+    {
+      id: 'vengeful-forge',
+      name: 'Vengeful forge',
+      method: 'GET',
+      target: 'https://git.vengeful.eu/api/healthz',
+      tooltip: 'Uptime of git.vengeful.eu',
+      statusPageLink: 'https://git.vengeful.eu',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      checkLocationWorkerRoute: 'https://de.naco.li',
+    },
+    {
+      id: 'synapse-main',
+      name: 'Vengeful Synapse',
+      method: 'GET',
+      target: 'https://matrix.vengeful.eu/health',
+      tooltip: 'Uptime of matrix.vengeful.eu',
+      statusPageLink: 'https://element.vengeful.eu',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      checkLocationWorkerRoute: 'https://de.naco.li',
+    }
     // Example TCP Monitor
     //{
       //id: 'test_tcp_monitor',
