@@ -108,6 +108,7 @@ const workerConfig = {
       target: '130.61.16.195:5432',
       tooltip: 'Postgres server oracle arm',
       timeout: 5000,
+      checkLocationWorkerRoute: 'https://de.naco.li',
     }
   ],
   notification: {
