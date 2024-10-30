@@ -88,7 +88,7 @@ const workerConfig = {
         'User-Agent': 'Uptimeflare',
       },
       checkLocationWorkerRoute: 'https://de.naco.li',
-    }
+    },
     // Example TCP Monitor
     //{
       //id: 'test_tcp_monitor',
@@ -101,6 +101,14 @@ const workerConfig = {
       //statusPageLink: 'https://example.com',
       //timeout: 5000,
     //},
+    {
+      id: 'oracle_postgres',
+      name: 'Postgres server',
+      method: 'TCP_PING',
+      target: '130.61.16.195:5432',
+      tooltip: 'Postgres server oracle arm',
+      timeout: 5000,
+    }
   ],
   notification: {
     // [Optional] apprise API server URL
