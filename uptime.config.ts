@@ -106,7 +106,16 @@ const workerConfig = {
       name: 'Postgres server',
       method: 'TCP_PING',
       target: '130.61.16.195:5432',
-      tooltip: 'Postgres server oracle arm',
+      tooltip: 'Uptime of Oracle ARM Postgres server',
+      timeout: 5000,
+      checkLocationWorkerRoute: 'https://de.naco.li',
+    },
+    {
+      id: 'oracle_ssh',
+      name: 'Oracle ARM server',
+      method: 'TCP_PING',
+      target: '130.61.16.195:22221',
+      tooltip: 'Uptime of Oracle ARM server',
       timeout: 5000,
       checkLocationWorkerRoute: 'https://de.naco.li',
     }
