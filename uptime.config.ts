@@ -102,6 +102,15 @@ const workerConfig = {
       //timeout: 5000,
     //},
     {
+      id: 'matrix_ssh',
+      name: 'Synapse host system',
+      method: 'TCP_PING',
+      target: '85.202.163.64:22221',
+      tooltip: 'Uptime of Synapse host system',
+      timeout: 5000,
+      checkLocationWorkerRoute: 'https://de.naco.li',
+    },
+    {
       id: 'oracle_postgres',
       name: 'Postgres server',
       method: 'TCP_PING',
@@ -116,6 +125,15 @@ const workerConfig = {
       method: 'TCP_PING',
       target: '130.61.16.195:22221',
       tooltip: 'Uptime of Oracle ARM server',
+      timeout: 5000,
+      checkLocationWorkerRoute: 'https://de.naco.li',
+    },
+    {
+      id: 'vengeful_ssh',
+      name: 'Vengeful server',
+      method: 'TCP_PING',
+      target: '185.216.214.52:22221',
+      tooltip: 'Uptime of the Vengeful.eu host',
       timeout: 5000,
       checkLocationWorkerRoute: 'https://de.naco.li',
     }
