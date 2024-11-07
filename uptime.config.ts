@@ -103,7 +103,7 @@ const workerConfig = {
     //},
     {
       id: 'matrix_ssh',
-      name: 'Synapse host system',
+      name: 'Old Synapse host system',
       method: 'TCP_PING',
       target: '85.202.163.64:22221',
       tooltip: 'Uptime of Synapse host system',
