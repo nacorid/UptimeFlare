@@ -101,7 +101,7 @@ const workerConfig = {
       //statusPageLink: 'https://example.com',
       //timeout: 5000,
     //},
-    {
+    /*{
       id: 'matrix_ssh',
       name: 'Old Synapse host system',
       method: 'TCP_PING',
@@ -118,7 +118,7 @@ const workerConfig = {
       tooltip: 'Uptime of Oracle ARM Postgres server',
       timeout: 5000,
       checkLocationWorkerRoute: 'https://de.naco.li',
-    },
+    },*/
     {
       id: 'oracle_ssh',
       name: 'Oracle ARM server',
