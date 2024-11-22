@@ -102,7 +102,7 @@ const workerConfig = {
         'User-Agent': 'Uptimeflare',
       },
       //checkLocationWorkerRoute: 'https://de.naco.li',
-    }
+    },
     // Example TCP Monitor
     //{
       //id: 'test_tcp_monitor',
