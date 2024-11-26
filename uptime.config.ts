@@ -139,7 +139,7 @@ const workerConfig = {
       method: 'TCP_PING',
       target: '130.61.16.195:22221',
       tooltip: 'Uptime of Oracle ARM server',
-      timeout: 5000,
+      timeout: 30000,
       //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
@@ -148,7 +148,7 @@ const workerConfig = {
       method: 'TCP_PING',
       target: '185.216.214.52:22221',
       tooltip: 'Uptime of the Vengeful.eu host',
-      timeout: 5000,
+      timeout: 30000,
       //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
@@ -157,7 +157,7 @@ const workerConfig = {
       method: 'TCP_PING',
       target: '	217.182.199.102:22',
       tooltip: 'Uptime of Kimsufi KS-LE-B server',
-      timeout: 5000,
+      timeout: 30000,
       //checkLocationWorkerRoute: 'https://de.naco.li',
     }
   ],
