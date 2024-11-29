@@ -155,7 +155,7 @@ const workerConfig = {
       id: 'ovh_25skleb01_ssh',
       name: 'OVH KS-LE-B Server',
       method: 'TCP_PING',
-      target: '	217.182.199.102:22',
+      target: '217.182.199.102:22',
       tooltip: 'Uptime of Kimsufi KS-LE-B server',
       timeout: 30000,
       //checkLocationWorkerRoute: 'https://de.naco.li',
