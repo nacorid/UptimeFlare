@@ -45,7 +45,7 @@ const workerConfig = {
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
       id: 'forgejo',
@@ -59,7 +59,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
       id: 'vengeful-forge',
@@ -73,7 +73,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
       id: 'synapse-main',
@@ -87,7 +87,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
       id: 'vengeful-auth',
@@ -101,7 +101,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     // Example TCP Monitor
     //{
@@ -122,7 +122,7 @@ const workerConfig = {
       target: '130.61.16.195:22221',
       tooltip: 'Uptime of Oracle ARM server',
       timeout: 30000,
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     },
     {
       id: 'ovh_25skleb01_ssh',
@@ -131,7 +131,7 @@ const workerConfig = {
       target: '217.182.199.102:22',
       tooltip: 'Uptime of Kimsufi KS-LE-B server',
       timeout: 30000,
-      checkLocationWorkerRoute: 'https://de.naco.li',
+      //checkLocationWorkerRoute: 'https://de.naco.li',
     }
   ],
   notification: {
