@@ -1,15 +1,23 @@
-const pageConfig = {
+import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
+
+const pageConfig: PageConfig = {
   // Title for your status page
   title: "Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://git.saneke.eu', label: 'Forgejo' },
-    { link: 'https://element.saneke.eu/', label: 'Element' },
+    { link: 'https://git.vengeful.eu', label: 'Forgejo' },
+    { link: 'https://element.vengeful.eu/', label: 'Element' },
     //{ link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
   ],
+  group: {
+    '🌐 Public (vengeful)': ['ovh_25skleb01_ssh', 'vengeful-forge', 'synapse-main', 'vengeful-auth', 'vengeful-relay'],
+    '🌐 Public (api.naco.li)': ['nacoli-api'],
+    '🌐 Public (saneke)': ['oracle_ssh', 'dendrite', 'forgejo'],
+    //'🔐 Private': ['test_tcp_monitor'],
+  },
 }
 
-const workerConfig = {
+const workerConfig: WorkerConfig = {
   // Write KV at most every 3 minutes unless the status changed
   kvWriteCooldownMinutes: 3,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
@@ -45,7 +53,7 @@ const workerConfig = {
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
     },
     {
       id: 'forgejo',
@@ -59,7 +67,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
     },
     {
       id: 'vengeful-forge',
@@ -73,7 +81,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
     },
     {
       id: 'synapse-main',
@@ -87,7 +95,7 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
     },
     {
       id: 'vengeful-auth',
@@ -101,7 +109,35 @@ const workerConfig = {
       headers: {
         'User-Agent': 'Uptimeflare',
       },
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'vengeful-relay',
+      name: 'Vengeful Nostr Relay',
+      method: 'GET',
+      target: 'https://relay.vengeful.eu/healthz',
+      tooltip: 'Uptime of relay.vengeful.eu',
+      statusPageLink: 'https://relay.vengeful.eu',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'nacoli-api',
+      name: 'naco.li API Server',
+      method: 'GET',
+      target: 'https://api.naco.li/healthz',
+      tooltip: 'Uptime of api.naco.li',
+      statusPageLink: 'https://api.naco.li',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      checkProxy: 'worker://weur'
     },
     // Example TCP Monitor
     //{
@@ -122,7 +158,7 @@ const workerConfig = {
       target: '130.61.16.195:22221',
       tooltip: 'Uptime of Oracle ARM server',
       timeout: 30000,
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
     },
     {
       id: 'ovh_25skleb01_ssh',
@@ -131,7 +167,7 @@ const workerConfig = {
       target: '217.182.199.102:22',
       tooltip: 'Uptime of Kimsufi KS-LE-B server',
       timeout: 30000,
-      //checkLocationWorkerRoute: 'https://de.naco.li',
+      checkProxy: 'worker://weur'
     }
   ],
   notification: {
