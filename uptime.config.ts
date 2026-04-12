@@ -33,7 +33,7 @@ const workerConfig: WorkerConfig = {
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://matrix.saneke.eu/_dendrite/monitor/health',
+      target: 'https://matrix.saneke.eu/_zendrite/monitor/health',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
       tooltip: 'Uptime of matrix.saneke.eu',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
