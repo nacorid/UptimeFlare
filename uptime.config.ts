@@ -139,6 +139,20 @@ const workerConfig: WorkerConfig = {
       },
       checkProxy: 'worker://weur'
     },
+    {
+      id: 'x402-feed',
+      name: 'bluesky x402 feed',
+      method: 'GET',
+      target: 'https://x402-feed.naco.li/healthz',
+      tooltip: 'Uptime of the bluesky x402 feed generator',
+      statusPageLink: 'https://x402-feed.naco.li',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      checkProxy: 'worker://weur'
+    },
     // Example TCP Monitor
     //{
       //id: 'test_tcp_monitor',
