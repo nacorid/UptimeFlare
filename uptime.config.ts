@@ -11,7 +11,7 @@ const pageConfig: PageConfig = {
   ],
   group: {
     '🌐 Public (vengeful)': ['ovh_25skleb01_ssh', 'vengeful-forge', 'synapse-main', 'vengeful-auth', 'vengeful-relay'],
-    '🌐 Public (api.naco.li)': ['nacoli-api'],
+    '🌐 Public (api.naco.li)': ['nacoli-api', 'x402-feed'],
     '🌐 Public (saneke)': ['oracle_ssh', 'dendrite', 'forgejo'],
     //'🔐 Private': ['test_tcp_monitor'],
   },
