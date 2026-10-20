@@ -41,7 +41,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 60000,
+      timeout: 10000,
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
@@ -63,7 +63,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Uptime of git.saneke.eu',
       statusPageLink: 'https://git.saneke.eu',
       expectedCodes: [200],
-      timeout: 60000,
+      timeout: 10000,
       headers: {
         'User-Agent': 'Uptimeflare',
       },
@@ -171,7 +171,7 @@ const workerConfig: WorkerConfig = {
       method: 'TCP_PING',
       target: '130.61.16.195:22221',
       tooltip: 'Uptime of Oracle ARM server',
-      timeout: 30000,
+      timeout: 10000,
       checkProxy: 'worker://weur'
     },
     {
@@ -180,7 +180,7 @@ const workerConfig: WorkerConfig = {
       method: 'TCP_PING',
       target: '217.182.199.102:22',
       tooltip: 'Uptime of Kimsufi KS-LE-B server',
-      timeout: 30000,
+      timeout: 10000,
       checkProxy: 'worker://weur'
     }
   ],
